@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS air_traffic;
 CREATE DATABASE air_traffic;
 
 \c air_traffic
-CREATE TABLES airlines
+CREATE TABLE airlines
 (
   id INTEGER PRIMARY KEY,
   airline_name TEXT NOT NULL
@@ -60,7 +60,7 @@ VALUES
   
 
 INSERT INTO tickets
-  (first_name, last_name, seat, departure, arrival, airline, from_city, from_country, to_city, to_country)
+  (passenger_id, seat, departure, arrival, airline, from_city, from_country, to_city, to_country)
 VALUES
   (1, '33B', '2018-04-08 09:00:00', '2018-04-08 12:00:00', 1, 'Washington DC', 'United States', 'Seattle', 'United States'),
   (2, '8A', '2018-12-19 12:45:00', '2018-12-19 16:15:00', 2, 'Tokyo', 'Japan', 'London', 'United Kingdom'),
